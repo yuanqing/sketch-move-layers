@@ -1,0 +1,25 @@
+{
+  "name": "Move Layers",
+  "description": "A Sketch plugin for moving layers on the page",
+  "author": "Lim Yuan Qing",
+  "homepage": "https://github.com/yuanqing/sketch-move-layers",
+  "version": "0.0.0",
+  "identifier": "yuanqing.sketch-move-layers",
+  "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-move-layers/master/appcast.xml",
+  "bundleVersion": 1,
+  "disableCocoaScriptPreprocessor": true,
+  "commands": [
+    {
+      "name": "Move Selected Layers",
+      "identifier": "yuanqing.sketch-move-layers.move-selected-layers",
+      "script": "plugin.js",
+      "handler": "move-selected-layers"
+    }
+  ],
+  "menu": {
+    "items": [
+      "yuanqing.sketch-move-layers.move-selected-layers"
+    ],
+    "isRoot": true
+  }
+}

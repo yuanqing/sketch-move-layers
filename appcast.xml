@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Move Layers</title>
+    <link>https://raw.githubusercontent.com/yuanqing/sketch-move-layers/master/appcast.xml</link>
+    <description>A Sketch plugin for moving layers on the page</description>
+    <language>en</language>
+    <item>
+      <title>v0.0.0</title>
+      <description>0.0.0</description>
+      <enclosure url="https://github.com/yuanqing/sketch-move-layers/archive/v0.0.0.zip" sparkle:version="0.0.0"/>
+    </item>
+  </channel>
+</rss>

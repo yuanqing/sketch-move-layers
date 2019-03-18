@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "devDependencies": {
+    "sketch-plugin-helper": "*"
+  },
+  "scripts": {
+    "build": "sph build",
+    "fix": "sph lint --fix",
+    "lint": "sph lint",
+    "symlink": "sph symlink",
+    "unlink": "sph symlink --delete",
+    "version": "sph version",
+    "watch": "sph build --watch"
+  },
+  "sketch-plugin-helper": {
+    "pluginName": "Move Layers",
+    "pluginDescription": "A Sketch plugin for moving layers on the page",
+    "authorName": "Lim Yuan Qing",
+    "githubUserName": "yuanqing",
+    "githubRepositoryName": "sketch-move-layers",
+    "menu": [
+      {
+        "handler": "move-selected-layers",
+        "label": "Move Selected Layers"
+      }
+    ],
+    "defaults": {
+      "moveSelectedLayers.horizontal": "0",
+      "moveSelectedLayers.vertical": "0"
+    }
+  }
+}
