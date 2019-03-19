@@ -26,20 +26,20 @@
       },
       "-",
       {
-        "handler": "space/space-selection-right",
-        "label": "Space Selection Right"
+        "handler": "space-out-selected-layers/space-selected-layers-right",
+        "label": "Space Selected Layers Right"
       },
       {
-        "handler": "space/space-selection-left",
-        "label": "Space Selection Left"
+        "handler": "space-out-selected-layers/space-selected-layers-left",
+        "label": "Space Selected Layers Left"
       },
       {
-        "handler": "space/space-selection-down",
-        "label": "Space Selection Down"
+        "handler": "space-out-selected-layers/space-selected-layers-down",
+        "label": "Space Selected Layers Down"
       },
       {
-        "handler": "space/space-selection-up",
-        "label": "Space Selection Up"
+        "handler": "space-out-selected-layers/space-selected-layers-up",
+        "label": "Space Selected Layers Up"
       }
     ],
     "defaults": {

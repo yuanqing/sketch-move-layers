@@ -1,7 +1,7 @@
-const space = require('./space')
+const spaceOutSelectedLayers = require('./space-out-selected-layers')
 
-module.exports = space({
-  userInputDialogTitle: 'Space Selection Down',
+module.exports = spaceOutSelectedLayers({
+  userInputDialogTitle: 'Space Selected Layers Down',
   successMessage: 'Spaced layers down',
   sort: function (layerX, layerY) {
     return layerX.frame.y - layerY.frame.y

@@ -7,7 +7,7 @@ const {
   TEXT_BOX
 } = require('sketch-plugin-helper')
 
-function space ({ userInputDialogTitle, sort, spaceLayers, successMessage }) {
+function spaceOutSelectedLayers ({ userInputDialogTitle, sort, spaceLayers, successMessage }) {
   return function () {
     const selectedLayers = getSelectedLayers()
     if (selectedLayers.length < 2) {
@@ -35,4 +35,4 @@ function space ({ userInputDialogTitle, sort, spaceLayers, successMessage }) {
   }
 }
 
-module.exports = space
+module.exports = spaceOutSelectedLayers
