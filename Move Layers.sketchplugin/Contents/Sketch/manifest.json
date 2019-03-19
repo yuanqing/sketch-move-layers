@@ -1,6 +1,6 @@
 {
   "name": "Move Layers",
-  "description": "A Sketch plugin for moving layers on the page",
+  "description": "A Sketch plugin for moving the selected layers",
   "author": "Lim Yuan Qing",
   "homepage": "https://github.com/yuanqing/sketch-move-layers",
   "version": "0.0.0",
@@ -10,45 +10,45 @@
   "disableCocoaScriptPreprocessor": true,
   "commands": [
     {
-      "name": "Move Selected Layers",
-      "identifier": "yuanqing.sketch-move-layers.move-selected-layers",
+      "name": "Offset Selected Layers",
+      "identifier": "yuanqing.sketch-move-layers.offset-selected-layers",
       "script": "plugin.js",
-      "handler": "move-selected-layers"
+      "handler": "offset-selected-layers"
     },
     {
-      "name": "→ Space Right",
-      "identifier": "yuanqing.sketch-move-layers.space-right",
+      "name": "Space Selection Right",
+      "identifier": "yuanqing.sketch-move-layers.space-selection-right",
       "script": "plugin.js",
-      "handler": "space/space-right"
+      "handler": "space/space-selection-right"
     },
     {
-      "name": "← Space Left",
-      "identifier": "yuanqing.sketch-move-layers.space-left",
+      "name": "Space Selection Left",
+      "identifier": "yuanqing.sketch-move-layers.space-selection-left",
       "script": "plugin.js",
-      "handler": "space/space-left"
+      "handler": "space/space-selection-left"
     },
     {
-      "name": "↓ Space Down",
-      "identifier": "yuanqing.sketch-move-layers.space-down",
+      "name": "Space Selection Down",
+      "identifier": "yuanqing.sketch-move-layers.space-selection-down",
       "script": "plugin.js",
-      "handler": "space/space-down"
+      "handler": "space/space-selection-down"
     },
     {
-      "name": "↑ Space Up",
-      "identifier": "yuanqing.sketch-move-layers.space-up",
+      "name": "Space Selection Up",
+      "identifier": "yuanqing.sketch-move-layers.space-selection-up",
       "script": "plugin.js",
-      "handler": "space/space-up"
+      "handler": "space/space-selection-up"
     }
   ],
   "menu": {
     "title": "Move Layers",
     "items": [
-      "yuanqing.sketch-move-layers.move-selected-layers",
+      "yuanqing.sketch-move-layers.offset-selected-layers",
       "-",
-      "yuanqing.sketch-move-layers.space-right",
-      "yuanqing.sketch-move-layers.space-left",
-      "yuanqing.sketch-move-layers.space-down",
-      "yuanqing.sketch-move-layers.space-up"
+      "yuanqing.sketch-move-layers.space-selection-right",
+      "yuanqing.sketch-move-layers.space-selection-left",
+      "yuanqing.sketch-move-layers.space-selection-down",
+      "yuanqing.sketch-move-layers.space-selection-up"
     ]
   }
 }

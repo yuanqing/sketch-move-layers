@@ -15,36 +15,36 @@
   },
   "sketch-plugin-helper": {
     "pluginName": "Move Layers",
-    "pluginDescription": "A Sketch plugin for moving layers on the page",
+    "pluginDescription": "A Sketch plugin for moving the selected layers",
     "authorName": "Lim Yuan Qing",
     "githubUserName": "yuanqing",
     "githubRepositoryName": "sketch-move-layers",
     "menu": [
       {
-        "handler": "move-selected-layers",
-        "label": "Move Selected Layers"
+        "handler": "offset-selected-layers",
+        "label": "Offset Selected Layers"
       },
       "-",
       {
-        "handler": "space/space-right",
-        "label": "Space Right"
+        "handler": "space/space-selection-right",
+        "label": "Space Selection Right"
       },
       {
-        "handler": "space/space-left",
-        "label": "Space Left"
+        "handler": "space/space-selection-left",
+        "label": "Space Selection Left"
       },
       {
-        "handler": "space/space-down",
-        "label": "Space Down"
+        "handler": "space/space-selection-down",
+        "label": "Space Selection Down"
       },
       {
-        "handler": "space/space-up",
-        "label": "Space Up"
+        "handler": "space/space-selection-up",
+        "label": "Space Selection Up"
       }
     ],
     "defaults": {
-      "moveSelectedLayers.horizontal": "0",
-      "moveSelectedLayers.vertical": "0",
+      "offsetSelectedLayers.horizontal": "0",
+      "offsetSelectedLayers.vertical": "0",
       "space": "0"
     }
   }

@@ -7,22 +7,22 @@ const {
   TEXT_BOX
 } = require('sketch-plugin-helper')
 
-function moveSelectedLayers () {
+function offsetSelectedLayers () {
   const selectedLayers = getSelectedLayers()
   if (selectedLayers.length == 0) {
     showErrorMessage('Select at least one layer')
     return
   }
   const userInput = openUserInputDialog({
-    title: 'Move Selected Layers',
+    title: 'offset Selected Layers',
     inputs: [
       {
-        key: 'moveSelectedLayers.horizontal',
+        key: 'offsetSelectedLayers.horizontal',
         label: '→ Horizontal',
         type: TEXT_BOX
       },
       {
-        key: 'moveSelectedLayers.vertical',
+        key: 'offsetSelectedLayers.vertical',
         label: '↓ Vertical',
         type: TEXT_BOX
       }
@@ -32,8 +32,8 @@ function moveSelectedLayers () {
     return
   }
   saveUserInput(userInput)
-  const horizontal = parseFloat(userInput['moveSelectedLayers.horizontal'])
-  const vertical = parseFloat(userInput['moveSelectedLayers.vertical'])
+  const horizontal = parseFloat(userInput['offsetSelectedLayers.horizontal'])
+  const vertical = parseFloat(userInput['offsetSelectedLayers.vertical'])
   if (horizontal == 0 && vertical == 0) {
     return
   }
@@ -42,20 +42,20 @@ function moveSelectedLayers () {
     layer.frame.y += vertical
   })
   const length = selectedLayers.length
-  const h = addDirectionToOffset({
+  const h = prependDirection({
     offset: horizontal,
     positiveSymbol: '→',
     negativeSymbol: '←'
   })
-  const v = addDirectionToOffset({
+  const v = prependDirection({
     offset: vertical,
     positiveSymbol: '↓',
     negativeSymbol: '↑'
   })
-  showSuccessMessage(`Moved ${length == 1 ? 'layer' : 'layers'}${h}${v}`)
+  showSuccessMessage(`offsetd ${length == 1 ? 'layer' : 'layers'}${h}${v}`)
 }
 
-function addDirectionToOffset ({offset, positiveSymbol, negativeSymbol}) {
+function prependDirection ({ offset, positiveSymbol, negativeSymbol }) {
   if (offset > 0) {
     return ` ${positiveSymbol} ${offset}`
   }
@@ -65,4 +65,4 @@ function addDirectionToOffset ({offset, positiveSymbol, negativeSymbol}) {
   return ''
 }
 
-module.exports = moveSelectedLayers
+module.exports = offsetSelectedLayers

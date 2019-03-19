@@ -7,8 +7,8 @@ const {
   TEXT_BOX
 } = require('sketch-plugin-helper')
 
-function space ({userInputDialogTitle, sort, spaceLayers, successMessage}) {
-  return function() {
+function space ({ userInputDialogTitle, sort, spaceLayers, successMessage }) {
+  return function () {
     const selectedLayers = getSelectedLayers()
     if (selectedLayers.length < 2) {
       showErrorMessage('Select at least two layers')
@@ -30,7 +30,7 @@ function space ({userInputDialogTitle, sort, spaceLayers, successMessage}) {
     saveUserInput(userInput)
     const space = parseFloat(userInput.space)
     const layers = [].concat(selectedLayers).sort(sort)
-    spaceLayers({layers, space})
+    spaceLayers({ layers, space })
     showSuccessMessage(successMessage)
   }
 }
