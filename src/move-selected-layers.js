@@ -34,12 +34,35 @@ function moveSelectedLayers () {
   saveUserInput(userInput)
   const horizontal = parseFloat(userInput['moveSelectedLayers.horizontal'])
   const vertical = parseFloat(userInput['moveSelectedLayers.vertical'])
+  if (horizontal == 0 && vertical == 0) {
+    return
+  }
   selectedLayers.forEach(function (layer) {
     layer.frame.x += horizontal
     layer.frame.y += vertical
   })
   const length = selectedLayers.length
-  showSuccessMessage(`Moved ${length} ${length == 1 ? 'layer' : 'layers'}`)
+  const h = addDirectionToOffset({
+    offset: horizontal,
+    positiveSymbol: '→',
+    negativeSymbol: '←'
+  })
+  const v = addDirectionToOffset({
+    offset: vertical,
+    positiveSymbol: '↓',
+    negativeSymbol: '↑'
+  })
+  showSuccessMessage(`Moved ${length == 1 ? 'layer' : 'layers'}${h}${v}`)
+}
+
+function addDirectionToOffset ({offset, positiveSymbol, negativeSymbol}) {
+  if (offset > 0) {
+    return ` ${positiveSymbol} ${offset}`
+  }
+  if (offset < 0) {
+    return ` ${negativeSymbol} ${offset * -1}`
+  }
+  return ''
 }
 
 module.exports = moveSelectedLayers
