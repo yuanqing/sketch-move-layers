@@ -14,12 +14,41 @@
       "identifier": "yuanqing.sketch-move-layers.move-selected-layers",
       "script": "plugin.js",
       "handler": "move-selected-layers"
+    },
+    {
+      "name": "→ Space Right",
+      "identifier": "yuanqing.sketch-move-layers.space-right",
+      "script": "plugin.js",
+      "handler": "space/space-right"
+    },
+    {
+      "name": "← Space Left",
+      "identifier": "yuanqing.sketch-move-layers.space-left",
+      "script": "plugin.js",
+      "handler": "space/space-left"
+    },
+    {
+      "name": "↓ Space Down",
+      "identifier": "yuanqing.sketch-move-layers.space-down",
+      "script": "plugin.js",
+      "handler": "space/space-down"
+    },
+    {
+      "name": "↑ Space Up",
+      "identifier": "yuanqing.sketch-move-layers.space-up",
+      "script": "plugin.js",
+      "handler": "space/space-up"
     }
   ],
   "menu": {
+    "title": "Move Layers",
     "items": [
-      "yuanqing.sketch-move-layers.move-selected-layers"
-    ],
-    "isRoot": true
+      "yuanqing.sketch-move-layers.move-selected-layers",
+      "-",
+      "yuanqing.sketch-move-layers.space-right",
+      "yuanqing.sketch-move-layers.space-left",
+      "yuanqing.sketch-move-layers.space-down",
+      "yuanqing.sketch-move-layers.space-up"
+    ]
   }
 }

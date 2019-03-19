@@ -23,11 +23,29 @@
       {
         "handler": "move-selected-layers",
         "label": "Move Selected Layers"
+      },
+      "-",
+      {
+        "handler": "space/space-right",
+        "label": "Space Right"
+      },
+      {
+        "handler": "space/space-left",
+        "label": "Space Left"
+      },
+      {
+        "handler": "space/space-down",
+        "label": "Space Down"
+      },
+      {
+        "handler": "space/space-up",
+        "label": "Space Up"
       }
     ],
     "defaults": {
       "moveSelectedLayers.horizontal": "0",
-      "moveSelectedLayers.vertical": "0"
+      "moveSelectedLayers.vertical": "0",
+      "space": "0"
     }
   }
 }
