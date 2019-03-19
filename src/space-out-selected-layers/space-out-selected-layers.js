@@ -7,7 +7,12 @@ const {
   TEXT_BOX
 } = require('sketch-plugin-helper')
 
-function spaceOutSelectedLayers ({ userInputDialogTitle, sort, spaceLayers, successMessage }) {
+function spaceOutSelectedLayers ({
+  userInputDialogTitle,
+  sort,
+  spaceLayers,
+  successMessage
+}) {
   return function () {
     const selectedLayers = getSelectedLayers()
     if (selectedLayers.length < 2) {
