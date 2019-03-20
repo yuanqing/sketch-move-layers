@@ -1,20 +1,20 @@
-const {
+import {
   getSelectedLayers,
   openUserInputDialog,
   saveUserInput,
   showErrorMessage,
   showSuccessMessage,
   TEXT_BOX
-} = require('sketch-plugin-helper')
+} from 'sketch-plugin-helper'
 
-function offsetSelectedLayers () {
+export default function offsetSelectedLayers () {
   const selectedLayers = getSelectedLayers()
   if (selectedLayers.length == 0) {
     showErrorMessage('Select at least one layer')
     return
   }
   const userInput = openUserInputDialog({
-    title: 'offset Selected Layers',
+    title: 'Offset Selected Layers',
     inputs: [
       {
         key: 'offsetSelectedLayers.horizontal',
@@ -64,5 +64,3 @@ function prependDirection ({ offset, positiveSymbol, negativeSymbol }) {
   }
   return ''
 }
-
-module.exports = offsetSelectedLayers

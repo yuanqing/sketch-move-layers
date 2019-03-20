@@ -16,28 +16,52 @@
       "handler": "offset-selected-layers"
     },
     {
-      "name": "Space Selected Layers Right",
-      "identifier": "yuanqing.sketch-move-layers.space-selected-layers-right",
-      "script": "plugin.js",
-      "handler": "space-out-selected-layers/space-selected-layers-right"
-    },
-    {
       "name": "Space Selected Layers Left",
-      "identifier": "yuanqing.sketch-move-layers.space-selected-layers-left",
+      "identifier": "yuanqing.sketch-move-layers.space-selected-layers.space-selected-layers-left",
       "script": "plugin.js",
-      "handler": "space-out-selected-layers/space-selected-layers-left"
+      "handler": "space-selected-layers/space-selected-layers-left"
     },
     {
-      "name": "Space Selected Layers Down",
-      "identifier": "yuanqing.sketch-move-layers.space-selected-layers-down",
+      "name": "Space Selected Layers Right",
+      "identifier": "yuanqing.sketch-move-layers.space-selected-layers.space-selected-layers-right",
       "script": "plugin.js",
-      "handler": "space-out-selected-layers/space-selected-layers-down"
+      "handler": "space-selected-layers/space-selected-layers-right"
     },
     {
       "name": "Space Selected Layers Up",
-      "identifier": "yuanqing.sketch-move-layers.space-selected-layers-up",
+      "identifier": "yuanqing.sketch-move-layers.space-selected-layers.space-selected-layers-up",
       "script": "plugin.js",
-      "handler": "space-out-selected-layers/space-selected-layers-up"
+      "handler": "space-selected-layers/space-selected-layers-up"
+    },
+    {
+      "name": "Space Selected Layers Down",
+      "identifier": "yuanqing.sketch-move-layers.space-selected-layers.space-selected-layers-down",
+      "script": "plugin.js",
+      "handler": "space-selected-layers/space-selected-layers-down"
+    },
+    {
+      "name": "Space Layers in Group Left",
+      "identifier": "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-left",
+      "script": "plugin.js",
+      "handler": "space-layers-in-group/space-layers-in-group-left"
+    },
+    {
+      "name": "Space Layers in Group Right",
+      "identifier": "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-right",
+      "script": "plugin.js",
+      "handler": "space-layers-in-group/space-layers-in-group-right"
+    },
+    {
+      "name": "Space Layers in Group Up",
+      "identifier": "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-up",
+      "script": "plugin.js",
+      "handler": "space-layers-in-group/space-layers-in-group-up"
+    },
+    {
+      "name": "Space Layers in Group Down",
+      "identifier": "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-down",
+      "script": "plugin.js",
+      "handler": "space-layers-in-group/space-layers-in-group-down"
     }
   ],
   "menu": {
@@ -45,10 +69,15 @@
     "items": [
       "yuanqing.sketch-move-layers.offset-selected-layers",
       "-",
-      "yuanqing.sketch-move-layers.space-selected-layers-right",
-      "yuanqing.sketch-move-layers.space-selected-layers-left",
-      "yuanqing.sketch-move-layers.space-selected-layers-down",
-      "yuanqing.sketch-move-layers.space-selected-layers-up"
+      "yuanqing.sketch-move-layers.space-selected-layers.space-selected-layers-left",
+      "yuanqing.sketch-move-layers.space-selected-layers.space-selected-layers-right",
+      "yuanqing.sketch-move-layers.space-selected-layers.space-selected-layers-up",
+      "yuanqing.sketch-move-layers.space-selected-layers.space-selected-layers-down",
+      "-",
+      "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-left",
+      "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-right",
+      "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-up",
+      "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-down"
     ]
   }
 }

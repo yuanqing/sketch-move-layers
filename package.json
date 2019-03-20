@@ -26,26 +26,46 @@
       },
       "-",
       {
-        "handler": "space-out-selected-layers/space-selected-layers-right",
-        "label": "Space Selected Layers Right"
-      },
-      {
-        "handler": "space-out-selected-layers/space-selected-layers-left",
+        "handler": "space-selected-layers/space-selected-layers-left",
         "label": "Space Selected Layers Left"
       },
       {
-        "handler": "space-out-selected-layers/space-selected-layers-down",
-        "label": "Space Selected Layers Down"
+        "handler": "space-selected-layers/space-selected-layers-right",
+        "label": "Space Selected Layers Right"
       },
       {
-        "handler": "space-out-selected-layers/space-selected-layers-up",
+        "handler": "space-selected-layers/space-selected-layers-up",
         "label": "Space Selected Layers Up"
+      },
+      {
+        "handler": "space-selected-layers/space-selected-layers-down",
+        "label": "Space Selected Layers Down"
+      },
+      "-",
+      {
+        "handler": "space-layers-in-group/space-layers-in-group-left",
+        "label": "Space Layers in Group Left"
+      },
+      {
+        "handler": "space-layers-in-group/space-layers-in-group-right",
+        "label": "Space Layers in Group Right"
+      },
+      {
+        "handler": "space-layers-in-group/space-layers-in-group-up",
+        "label": "Space Layers in Group Up"
+      },
+      {
+        "handler": "space-layers-in-group/space-layers-in-group-down",
+        "label": "Space Layers in Group Down"
       }
     ],
     "defaults": {
-      "offsetSelectedLayers.horizontal": "0",
-      "offsetSelectedLayers.vertical": "0",
-      "space": "0"
+      "offsetSelectedLayers.horizontal": 0,
+      "offsetSelectedLayers.vertical": 0,
+      "spaceLayersInGroup.exactMatch": true,
+      "spaceLayersInGroup.groupName": "Group",
+      "spaceLayersInGroup.space": 0,
+      "spaceSelectedLayers.space": 0
     }
   }
 }
