@@ -1,6 +1,6 @@
 # sketch-move-layers
 
-> A Sketch plugin for moving the selected layers
+> A Sketch plugin to precisely move and arrange layers
 
 ## Usage
 

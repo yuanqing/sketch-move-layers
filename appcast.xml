@@ -3,7 +3,7 @@
   <channel>
     <title>Move Layers</title>
     <link>https://raw.githubusercontent.com/yuanqing/sketch-move-layers/master/appcast.xml</link>
-    <description>A Sketch plugin for moving the selected layers</description>
+    <description>A Sketch plugin to precisely move and arrange layers</description>
     <language>en</language>
     <item>
       <title>v0.0.0</title>

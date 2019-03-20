@@ -15,7 +15,7 @@
   },
   "sketch-plugin-helper": {
     "pluginName": "Move Layers",
-    "pluginDescription": "A Sketch plugin for moving the selected layers",
+    "pluginDescription": "A Sketch plugin to precisely move and arrange layers",
     "authorName": "Lim Yuan Qing",
     "githubUserName": "yuanqing",
     "githubRepositoryName": "sketch-move-layers",
