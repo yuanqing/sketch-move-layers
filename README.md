@@ -14,7 +14,7 @@
 
 ### Space Layers in Group
 
-- Space out layers within groups that match a given name or regular expression left, right, up or down by a given number of pixels
+- Space out layers within groups (that match a given name or regular expression) left, right, up or down by a given number of pixels
 
 ## Installation
 
