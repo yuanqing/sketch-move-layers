@@ -8,9 +8,13 @@
 
 - Offset the selected layers horizontally and/or vertically by a given number of pixels
 
-### Space Out Selected Layers
+### Space Selected Layers
 
-- Space out the selected layers left, right, down or up by a given number of pixels
+- Space out the selected layers left, right, up or down by a given number of pixels
+
+### Space Layers in Group
+
+- Space out layers within groups that match a given name or regular expression left, right, up or down by a given number of pixels
 
 ## Installation
 
