@@ -52,7 +52,7 @@ export default function offsetSelectedLayers () {
     positiveSymbol: '↓',
     negativeSymbol: '↑'
   })
-  showSuccessMessage(`offsetd ${length == 1 ? 'layer' : 'layers'}${h}${v}`)
+  showSuccessMessage(`Offset ${length == 1 ? 'layer' : 'layers'}${h}${v}`)
 }
 
 function prependDirection ({ offset, positiveSymbol, negativeSymbol }) {
