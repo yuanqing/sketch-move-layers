@@ -1,14 +1,15 @@
 import {
   adjustParentGroupsToFit,
   getSelectedLayers,
-  openUserInputDialog,
-  saveUserInput,
+  openSettingsDialog,
+  saveTemporarySettings,
   showErrorMessage,
   showSuccessMessage,
-  TEXT_BOX
+  NUMERIC_TEXT_BOX
 } from 'sketch-plugin-helper'
 
 import * as directions from '../directions/directions'
+import {calculateAbsoluteCoordinates} from '../calculate-absolute-coordinates'
 
 export default function spaceSelectedLayers (direction) {
   const { sortLayers, spaceLayers, label } = directions[direction]
@@ -18,26 +19,25 @@ export default function spaceSelectedLayers (direction) {
       showErrorMessage('Select at least two layers')
       return
     }
-    const userInput = openUserInputDialog({
+    const settings = openSettingsDialog({
       title: `Space Selected Layers ${label}`,
       inputs: [
         {
           key: 'spaceSelectedLayers.space',
           label: 'Space',
-          type: TEXT_BOX
+          type: NUMERIC_TEXT_BOX
         }
       ]
     })
-    if (!userInput) {
+    if (!settings) {
       return
     }
-    saveUserInput(userInput)
-    const space = parseFloat(userInput['spaceSelectedLayers.space'])
-    const layers = selectedLayers.sort(sortLayers)
-    spaceLayers({ layers, space })
-    layers.forEach(function (layer) {
-      adjustParentGroupsToFit(layer)
+    saveTemporarySettings(settings)
+    spaceLayers({
+      layers: calculateAbsoluteCoordinates(selectedLayers).sort(sortLayers),
+      space: settings['spaceSelectedLayers.space']
     })
+    selectedLayers.forEach(adjustParentGroupsToFit)
     showSuccessMessage(`Spaced selected layers ${direction}`)
   }
 }

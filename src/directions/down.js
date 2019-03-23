@@ -1,17 +1,17 @@
 export const label = 'Down'
 
-export function sortLayers (layerX, layerY) {
-  return layerX.frame.y - layerY.frame.y
+export function sortLayers (a, b) {
+  return b.y + b.layer.frame.height - (a.y + a.layer.frame.height)
 }
 
 export function spaceLayers ({ layers, space }) {
-  let y = null
-  layers.forEach(function (layer) {
-    if (y == null) {
-      y = layer.frame.y + layer.frame.height + space
+  let currentY = null
+  layers.forEach(function ({ y, layer }) {
+    if (currentY == null) {
+      currentY = y
       return
     }
-    layer.frame.y = y
-    y = y + layer.frame.height + space
+    currentY = currentY - space - layer.frame.height
+    layer.frame.y = currentY - (y - layer.frame.y)
   })
 }

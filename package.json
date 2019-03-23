@@ -21,8 +21,9 @@
     "githubRepositoryName": "sketch-move-layers",
     "menu": [
       {
-        "handler": "offset-selected-layers",
-        "label": "Offset Selected Layers"
+        "handler": "move-selected-layers",
+        "label": "Move Selected Layers",
+        "shortcut": "cmd shift m"
       },
       "-",
       {
@@ -60,8 +61,8 @@
       }
     ],
     "defaults": {
-      "offsetSelectedLayers.horizontal": 0,
-      "offsetSelectedLayers.vertical": 0,
+      "offsetSelectedLayers.horizontalOffset": null,
+      "offsetSelectedLayers.verticalOffset": null,
       "spaceLayersInGroup.exactMatch": true,
       "spaceLayersInGroup.groupName": "Group",
       "spaceLayersInGroup.space": 0,

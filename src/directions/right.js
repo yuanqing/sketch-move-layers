@@ -1,17 +1,17 @@
 export const label = 'Right'
 
-export function sortLayers (layerX, layerY) {
-  return layerX.frame.x - layerY.frame.x
+export function sortLayers (a, b) {
+  return b.x + b.layer.frame.width - (a.x + a.layer.frame.width)
 }
 
 export function spaceLayers ({ layers, space }) {
-  let x = null
-  layers.forEach(function (layer) {
-    if (x == null) {
-      x = layer.frame.x + layer.frame.width + space
+  let currentX = null
+  layers.forEach(function ({ x, layer }) {
+    if (currentX == null) {
+      currentX = x
       return
     }
-    layer.frame.x = x
-    x = x + layer.frame.width + space
+    currentX = currentX - space - layer.frame.width
+    layer.frame.x = currentX - (x - layer.frame.x)
   })
 }

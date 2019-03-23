@@ -2,20 +2,22 @@ import {
   adjustParentGroupsToFit,
   getAllLayers,
   iterateNestedLayers,
-  openUserInputDialog,
-  saveUserInput,
+  openSettingsDialog,
+  saveTemporarySettings,
   showErrorMessage,
   showSuccessMessage,
   CHECK_BOX,
+  NUMERIC_TEXT_BOX,
   TEXT_BOX
 } from 'sketch-plugin-helper'
 
 import * as directions from '../directions/directions'
+import {calculateAbsoluteCoordinates} from '../calculate-absolute-coordinates'
 
 export default function spaceLayersInGroup (direction) {
   const { sortLayers, spaceLayers, label } = directions[direction]
   return function () {
-    const userInput = openUserInputDialog({
+    const settings = openSettingsDialog({
       title: `Space Layers in Group ${label}`,
       inputs: [
         {
@@ -31,30 +33,32 @@ export default function spaceLayersInGroup (direction) {
         {
           key: 'spaceLayersInGroup.space',
           label: 'Space',
-          type: TEXT_BOX
+          type: NUMERIC_TEXT_BOX
         }
       ]
     })
-    if (!userInput) {
+    if (!settings) {
       return
     }
-    saveUserInput(userInput)
-    const space = parseFloat(userInput['spaceLayersInGroup.space'])
-    const groupName = userInput['spaceLayersInGroup.groupName']
+    saveTemporarySettings(settings)
+    const space = parseFloat(settings['spaceLayersInGroup.space'])
+    const groupName = settings['spaceLayersInGroup.groupName']
     const regularExpression = new RegExp(
-      userInput['spaceLayersInGroup.exactMatch'] ? `^${groupName}$` : groupName
+      settings['spaceLayersInGroup.exactMatch'] ? `^${groupName}$` : groupName
     )
     const groups = getGroupsByRegularExpression(regularExpression)
-    if (groups.length == 0) {
+    if (groups.length === 0) {
       showErrorMessage(`No groups found`)
       return
     }
     groups.forEach(function (group) {
-      const layers = [].concat(group.layers).sort(sortLayers)
-      spaceLayers({ layers, space })
-      group.adjustToFit()
-      adjustParentGroupsToFit(group)
+      spaceLayers({
+        layers: calculateAbsoluteCoordinates(group.layers).sort(sortLayers),
+        space
+      })
+      groups.adjustToFit()
     })
+    groups.forEach(adjustParentGroupsToFit)
     showSuccessMessage(`Spaced layers in group ${direction}`)
   }
 }
@@ -62,7 +66,7 @@ export default function spaceLayersInGroup (direction) {
 function getGroupsByRegularExpression (regularExpression) {
   const result = []
   iterateNestedLayers(getAllLayers(), function (layer) {
-    if (layer.type == 'Group' && regularExpression.test(layer.name)) {
+    if (layer.type === 'Group' && regularExpression.test(layer.name)) {
       result.push(layer)
     }
   })

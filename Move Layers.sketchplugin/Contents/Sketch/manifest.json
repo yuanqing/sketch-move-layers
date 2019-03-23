@@ -10,10 +10,11 @@
   "disableCocoaScriptPreprocessor": true,
   "commands": [
     {
-      "name": "Offset Selected Layers",
-      "identifier": "yuanqing.sketch-move-layers.offset-selected-layers",
+      "name": "Move Selected Layers",
+      "identifier": "yuanqing.sketch-move-layers.move-selected-layers",
       "script": "plugin.js",
-      "handler": "offset-selected-layers"
+      "shortcut": "cmd shift m",
+      "handler": "move-selected-layers"
     },
     {
       "name": "Space Selected Layers Left",
@@ -67,7 +68,7 @@
   "menu": {
     "title": "Move Layers",
     "items": [
-      "yuanqing.sketch-move-layers.offset-selected-layers",
+      "yuanqing.sketch-move-layers.move-selected-layers",
       "-",
       "yuanqing.sketch-move-layers.space-selected-layers.space-selected-layers-left",
       "yuanqing.sketch-move-layers.space-selected-layers.space-selected-layers-right",
