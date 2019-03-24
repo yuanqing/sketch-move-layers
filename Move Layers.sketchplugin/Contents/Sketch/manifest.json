@@ -13,7 +13,6 @@
       "name": "Move Selected Layers",
       "identifier": "yuanqing.sketch-move-layers.move-selected-layers",
       "script": "plugin.js",
-      "shortcut": "cmd shift m",
       "handler": "move-selected-layers"
     },
     {

@@ -6,8 +6,6 @@
 
 ### Move Selected Layers
 
-<kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>M</kbd>
-
 - Move the selected layers horizontally and/or vertically by a given number of pixels
 
 ### Space Selected Layers

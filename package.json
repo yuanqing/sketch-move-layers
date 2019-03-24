@@ -22,8 +22,7 @@
     "menu": [
       {
         "handler": "move-selected-layers",
-        "label": "Move Selected Layers",
-        "shortcut": "cmd shift m"
+        "label": "Move Selected Layers"
       },
       "-",
       {
