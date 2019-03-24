@@ -3,7 +3,7 @@
   "description": "A Sketch plugin to precisely move and arrange layers",
   "author": "Lim Yuan Qing",
   "homepage": "https://github.com/yuanqing/sketch-move-layers",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "identifier": "yuanqing.sketch-move-layers",
   "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-move-layers/master/appcast.xml",
   "bundleVersion": 1,
