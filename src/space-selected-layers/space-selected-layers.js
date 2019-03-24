@@ -8,24 +8,24 @@ import {
   NUMERIC_TEXT_BOX
 } from 'sketch-plugin-helper'
 
-import * as directions from '../directions/directions'
-import {calculateAbsoluteCoordinates} from '../calculate-absolute-coordinates'
+import directions from '../directions/directions'
+import { calculateAbsoluteCoordinates } from '../calculate-absolute-coordinates'
 
 export default function spaceSelectedLayers (direction) {
   const { sortLayers, spaceLayers, label } = directions[direction]
   return function () {
     const selectedLayers = getSelectedLayers()
     if (selectedLayers.length < 2) {
-      showErrorMessage('Select at least two layers')
+      showErrorMessage('Select at least 2 layers')
       return
     }
     const settings = openSettingsDialog({
       title: `Space Selected Layers ${label}`,
       inputs: [
         {
+          type: NUMERIC_TEXT_BOX,
           key: 'spaceSelectedLayers.space',
-          label: 'Space',
-          type: NUMERIC_TEXT_BOX
+          label: 'Space'
         }
       ]
     })

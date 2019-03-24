@@ -7,27 +7,29 @@ import {
   NUMERIC_TEXT_BOX
 } from 'sketch-plugin-helper'
 
+const settingsConfig = {
+  title: 'Move Selected Layers',
+  inputs: [
+    {
+      type: NUMERIC_TEXT_BOX,
+      key: 'moveSelectedLayers.horizontalOffset',
+      label: '→ Horizontal offset'
+    },
+    {
+      type: NUMERIC_TEXT_BOX,
+      key: 'moveSelectedLayers.verticalOffset',
+      label: '↓ Vertical offset'
+    }
+  ]
+}
+
 export default function moveSelectedLayers () {
   const selectedLayers = getSelectedLayers()
   if (selectedLayers.length === 0) {
-    showErrorMessage('Select at least one layer')
+    showErrorMessage('Select at least 1 layer')
     return
   }
-  const settings = openSettingsDialog({
-    title: 'Move Selected Layers',
-    inputs: [
-      {
-        type: NUMERIC_TEXT_BOX,
-        key: 'moveSelectedLayers.horizontalOffset',
-        label: '→ Horizontal offset'
-      },
-      {
-        type: NUMERIC_TEXT_BOX,
-        key: 'moveSelectedLayers.verticalOffset',
-        label: '↓ Vertical offset'
-      }
-    ]
-  })
+  const settings = openSettingsDialog(settingsConfig)
   if (!settings) {
     return
   }

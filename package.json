@@ -58,11 +58,16 @@
       {
         "handler": "space-layers-in-group/space-layers-in-group-down",
         "label": "Space Layers in Group Down"
+      },
+      "-",
+      {
+        "handler": "reset-settings",
+        "label": "Reset Settings"
       }
     ],
-    "defaults": {
-      "offsetSelectedLayers.horizontalOffset": null,
-      "offsetSelectedLayers.verticalOffset": null,
+    "defaultSettings": {
+      "moveSelectedLayers.horizontalOffset": null,
+      "moveSelectedLayers.verticalOffset": null,
       "spaceLayersInGroup.exactMatch": true,
       "spaceLayersInGroup.groupName": "Group",
       "spaceLayersInGroup.space": 0,

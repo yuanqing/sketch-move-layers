@@ -4,9 +4,11 @@
 
 ## Usage
 
-### Offset Selected Layers
+### Move Selected Layers
 
-- Offset the selected layers horizontally and/or vertically by a given number of pixels
+<kbd>⌘</kbd> <kbd>Shift</kbd> <kbd>M</kbd>
+
+- Move the selected layers horizontally and/or vertically by a given number of pixels
 
 ### Space Selected Layers
 
@@ -14,7 +16,7 @@
 
 ### Space Layers in Group
 
-- Space out layers within groups (that match a given name or regular expression) left, right, up or down by a given number of pixels
+- Space out layers within groups matching a given name or regular expression left, right, up or down by a given number of pixels
 
 ## Installation
 

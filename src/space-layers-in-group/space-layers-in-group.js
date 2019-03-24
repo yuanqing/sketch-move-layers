@@ -11,8 +11,8 @@ import {
   TEXT_BOX
 } from 'sketch-plugin-helper'
 
-import * as directions from '../directions/directions'
-import {calculateAbsoluteCoordinates} from '../calculate-absolute-coordinates'
+import directions from '../directions/directions'
+import { calculateAbsoluteCoordinates } from '../calculate-absolute-coordinates'
 
 export default function spaceLayersInGroup (direction) {
   const { sortLayers, spaceLayers, label } = directions[direction]
@@ -21,19 +21,19 @@ export default function spaceLayersInGroup (direction) {
       title: `Space Layers in Group ${label}`,
       inputs: [
         {
+          type: TEXT_BOX,
           key: 'spaceLayersInGroup.groupName',
-          label: 'Group name',
-          type: TEXT_BOX
+          label: 'Group name'
         },
         {
+          type: CHECK_BOX,
           key: 'spaceLayersInGroup.exactMatch',
-          label: 'Exact match',
-          type: CHECK_BOX
+          label: 'Exact match'
         },
         {
+          type: NUMERIC_TEXT_BOX,
           key: 'spaceLayersInGroup.space',
-          label: 'Space',
-          type: NUMERIC_TEXT_BOX
+          label: 'Space'
         }
       ]
     })
@@ -41,14 +41,14 @@ export default function spaceLayersInGroup (direction) {
       return
     }
     saveTemporarySettings(settings)
-    const space = parseFloat(settings['spaceLayersInGroup.space'])
+    const space = settings['spaceLayersInGroup.space']
     const groupName = settings['spaceLayersInGroup.groupName']
     const regularExpression = new RegExp(
       settings['spaceLayersInGroup.exactMatch'] ? `^${groupName}$` : groupName
     )
     const groups = getGroupsByRegularExpression(regularExpression)
     if (groups.length === 0) {
-      showErrorMessage(`No groups found`)
+      showErrorMessage('No groups found')
       return
     }
     groups.forEach(function (group) {
@@ -56,7 +56,7 @@ export default function spaceLayersInGroup (direction) {
         layers: calculateAbsoluteCoordinates(group.layers).sort(sortLayers),
         space
       })
-      groups.adjustToFit()
+      group.adjustToFit()
     })
     groups.forEach(adjustParentGroupsToFit)
     showSuccessMessage(`Spaced layers in group ${direction}`)

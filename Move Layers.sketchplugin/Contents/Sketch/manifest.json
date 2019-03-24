@@ -63,6 +63,12 @@
       "identifier": "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-down",
       "script": "plugin.js",
       "handler": "space-layers-in-group/space-layers-in-group-down"
+    },
+    {
+      "name": "Reset Settings",
+      "identifier": "yuanqing.sketch-move-layers.reset-settings",
+      "script": "plugin.js",
+      "handler": "reset-settings"
     }
   ],
   "menu": {
@@ -78,7 +84,9 @@
       "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-left",
       "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-right",
       "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-up",
-      "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-down"
+      "yuanqing.sketch-move-layers.space-layers-in-group.space-layers-in-group-down",
+      "-",
+      "yuanqing.sketch-move-layers.reset-settings"
     ]
   }
 }
