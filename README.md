@@ -1,4 +1,4 @@
-# sketch-move-layers
+# Move Layers
 
 > A Sketch plugin to precisely move and arrange layers
 
@@ -18,8 +18,8 @@
 
 ## Installation
 
-1. [Download and unzip the latest release.](https://github.com/yuanqing/sketch-move-layers/releases)
-2. Double-click `Move Layers.sketchplugin` to install.
+1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-move-layers/releases)
+2. Double-click `Move Layers.sketchplugin` to install
 
 ## License
 
