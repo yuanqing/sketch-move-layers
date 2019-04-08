@@ -1,6 +1,6 @@
 import {
   adjustParentGroupsToFit,
-  getAllLayers,
+  getLayersOnCurrentPage,
   iterateNestedLayers,
   openSettingsDialog,
   saveTemporarySettings,
@@ -65,7 +65,7 @@ export default function spaceLayersInGroup (direction) {
 
 function getGroupsByRegularExpression (regularExpression) {
   const result = []
-  iterateNestedLayers(getAllLayers(), function (layer) {
+  iterateNestedLayers(getLayersOnCurrentPage(), function (layer) {
     if (layer.type === 'Group' && regularExpression.test(layer.name)) {
       result.push(layer)
     }
