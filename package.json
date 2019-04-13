@@ -1,6 +1,15 @@
 {
-  "private": true,
+  "name": "sketch-move-layers",
   "version": "0.2.2",
+  "description": "A Sketch plugin to precisely move and arrange layers",
+  "keywords": [
+    "plugin",
+    "sketch",
+    "sketch-plugin-helper"
+  ],
+  "license": "MIT",
+  "author": "Lim Yuan Qing",
+  "repository": "yuanqing/sketch-move-layers",
   "devDependencies": {
     "sketch-plugin-helper": "*"
   },
@@ -14,11 +23,7 @@
     "watch": "sph build --watch"
   },
   "sketch-plugin-helper": {
-    "pluginName": "Move Layers",
-    "pluginDescription": "A Sketch plugin to precisely move and arrange layers",
-    "authorName": "Lim Yuan Qing",
-    "githubUserName": "yuanqing",
-    "githubRepositoryName": "sketch-move-layers",
+    "name": "Move Layers",
     "menu": [
       {
         "handler": "move-selected-layers",
