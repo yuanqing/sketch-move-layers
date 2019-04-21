@@ -70,12 +70,18 @@
       }
     ],
     "defaultSettings": {
-      "moveSelectedLayers.horizontalOffset": null,
-      "moveSelectedLayers.verticalOffset": null,
-      "spaceLayersInGroup.exactMatch": true,
-      "spaceLayersInGroup.groupName": "Group",
-      "spaceLayersInGroup.space": 0,
-      "spaceSelectedLayers.space": 0
+      "moveSelectedLayers": {
+        "horizontalOffset": null,
+        "verticalOffset": null
+      },
+      "spaceLayersInGroup": {
+        "exactMatch": true,
+        "groupName": "Group",
+        "space": 0
+      },
+      "spaceSelectedLayers": {
+        "space": 0
+      }
     }
   }
 }

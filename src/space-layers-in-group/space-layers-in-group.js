@@ -41,10 +41,9 @@ export default function spaceLayersInGroup (direction) {
       return
     }
     saveTemporarySettings(settings)
-    const space = settings['spaceLayersInGroup.space']
-    const groupName = settings['spaceLayersInGroup.groupName']
+    const { space, groupName, exactMatch } = settings.spaceLayersInGroup
     const regularExpression = new RegExp(
-      settings['spaceLayersInGroup.exactMatch'] ? `^${groupName}$` : groupName
+      exactMatch ? `^${groupName}$` : groupName
     )
     const groups = getGroupsByRegularExpression(regularExpression)
     if (groups.length === 0) {

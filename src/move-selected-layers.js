@@ -33,8 +33,7 @@ export default function moveSelectedLayers () {
   if (!settings) {
     return
   }
-  const horizontalOffset = settings['moveSelectedLayers.horizontalOffset']
-  const verticalOffset = settings['moveSelectedLayers.verticalOffset']
+  const { horizontalOffset, verticalOffset } = settings.moveSelectedLayers
   if (horizontalOffset === 0 && verticalOffset === 0) {
     return
   }

@@ -33,9 +33,10 @@ export default function spaceSelectedLayers (direction) {
       return
     }
     saveTemporarySettings(settings)
+    const { space } = settings.spaceSelectedLayers
     spaceLayers({
       layers: calculateAbsoluteCoordinates(selectedLayers).sort(sortLayers),
-      space: settings['spaceSelectedLayers.space']
+      space
     })
     selectedLayers.forEach(adjustParentGroupsToFit)
     showSuccessMessage(`Spaced selected layers ${direction}`)
