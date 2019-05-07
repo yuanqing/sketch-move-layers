@@ -1,6 +1,6 @@
 {
   "name": "sketch-move-layers",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A Sketch plugin to precisely move and arrange layers",
   "keywords": [
     "plugin",
