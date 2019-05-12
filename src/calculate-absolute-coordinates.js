@@ -1,9 +1,9 @@
-import { getAbsoluteCoordinates } from 'sketch-plugin-helper'
+import { calculateCoordinatesRelativeToPage } from 'sketch-plugin-helper'
 
 export function calculateAbsoluteCoordinates (layers) {
   return layers.map(function (layer) {
     return {
-      ...getAbsoluteCoordinates(layer),
+      ...calculateCoordinatesRelativeToPage(layer),
       layer
     }
   })
