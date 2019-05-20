@@ -1,4 +1,4 @@
-# Move Layers
+# Move Layers [![npm Version](https://badgen.net/npm/v/sketch-move-layers)](https://www.npmjs.org/package/sketch-move-layers)
 
 > A Sketch plugin to precisely move and arrange layers
 
