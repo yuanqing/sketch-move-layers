@@ -21,7 +21,7 @@ export default function spaceSelectedLayers (direction) {
     }
     const settings = openSettingsDialog({
       title: `Space Selected Layers ${label}`,
-      inputs: [
+      formFields: [
         {
           type: NUMERIC_TEXT_BOX,
           key: 'spaceSelectedLayers.space',

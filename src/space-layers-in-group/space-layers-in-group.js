@@ -19,7 +19,7 @@ export default function spaceLayersInGroup (direction) {
   return function () {
     const settings = openSettingsDialog({
       title: `Space Layers in Group ${label}`,
-      inputs: [
+      formFields: [
         {
           type: TEXT_BOX,
           key: 'spaceLayersInGroup.groupName',

@@ -9,7 +9,7 @@ import {
 
 const settingsConfig = {
   title: 'Move Selected Layers',
-  inputs: [
+  formFields: [
     {
       type: NUMERIC_TEXT_BOX,
       key: 'moveSelectedLayers.horizontalOffset',

@@ -14,13 +14,16 @@
     "src"
   ],
   "scripts": {
-    "build": "sph build",
-    "fix": "sph lint --fix",
-    "lint": "sph lint",
-    "symlink": "sph symlink",
-    "unlink": "sph symlink --delete",
-    "version": "sph version",
-    "watch": "sph build --watch"
+    "build": "sketch build",
+    "fix": "sketch lint --fix",
+    "handler": "sketch handler",
+    "lint": "sketch lint",
+    "script": "sketch script",
+    "symlink": "sketch symlink",
+    "test": "sketch test",
+    "unlink": "sketch symlink --delete",
+    "version": "sketch version",
+    "watch": "sketch build --watch"
   },
   "devDependencies": {
     "sketch-plugin-helper": "*"
@@ -30,46 +33,46 @@
     "menu": [
       {
         "handler": "move-selected-layers",
-        "label": "Move Selected Layers"
+        "name": "Move Selected Layers"
       },
       "-",
       {
         "handler": "space-selected-layers/space-selected-layers-left",
-        "label": "Space Selected Layers Left"
+        "name": "Space Selected Layers Left"
       },
       {
         "handler": "space-selected-layers/space-selected-layers-right",
-        "label": "Space Selected Layers Right"
+        "name": "Space Selected Layers Right"
       },
       {
         "handler": "space-selected-layers/space-selected-layers-up",
-        "label": "Space Selected Layers Up"
+        "name": "Space Selected Layers Up"
       },
       {
         "handler": "space-selected-layers/space-selected-layers-down",
-        "label": "Space Selected Layers Down"
+        "name": "Space Selected Layers Down"
       },
       "-",
       {
         "handler": "space-layers-in-group/space-layers-in-group-left",
-        "label": "Space Layers in Group Left"
+        "name": "Space Layers in Group Left"
       },
       {
         "handler": "space-layers-in-group/space-layers-in-group-right",
-        "label": "Space Layers in Group Right"
+        "name": "Space Layers in Group Right"
       },
       {
         "handler": "space-layers-in-group/space-layers-in-group-up",
-        "label": "Space Layers in Group Up"
+        "name": "Space Layers in Group Up"
       },
       {
         "handler": "space-layers-in-group/space-layers-in-group-down",
-        "label": "Space Layers in Group Down"
+        "name": "Space Layers in Group Down"
       },
       "-",
       {
         "handler": "reset-settings",
-        "label": "Reset Settings"
+        "name": "Reset Settings"
       }
     ],
     "defaultSettings": {
