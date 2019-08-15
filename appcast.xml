@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Move Layers</title>
-    <link>https://raw.githubusercontent.com/yuanqing/sketch-move-layers/master/appcast.xml</link>
+    <link>https://raw.githubusercontent.com/yuanqing/sketch-plugins/master/packages/sketch-move-layers/.appcast.xml</link>
     <description>A Sketch plugin to precisely move and arrange layers</description>
     <language>en</language>
     <item>
