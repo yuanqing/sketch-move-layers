@@ -6,6 +6,11 @@
     <description>A Sketch plugin to precisely move and arrange layers</description>
     <language>en</language>
     <item>
+      <title>v0.5.0</title>
+      <description>0.5.0</description>
+      <enclosure url="https://github.com/yuanqing/sketch-plugins/releases/download/sketch-move-layers-0.5.0/plugin.zip" sparkle:version="0.5.0"/>
+    </item>
+    <item>
       <title>v0.4.0</title>
       <description>0.4.0</description>
       <enclosure url="https://github.com/yuanqing/sketch-move-layers/archive/v0.4.0.zip" sparkle:version="0.4.0"/>
